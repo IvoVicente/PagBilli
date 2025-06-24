@@ -402,7 +402,60 @@ body {
 
 /* sessão 5 */
 
-.formulario {}
+.formulario {
+    padding: 50px;
+}
+
+.formulario h2 {
+    font-size: 34px;
+}
+
+.formulario p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.formulario form .grid-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form .grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 50px;
+
+}
+
+.formulario form .grid-form div label {
+    font-size: 20px;
+}
+
+.formulario form .grid-form div input {
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 8px 0;
+}
+
+.formulario form .grid-form div select {
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 8px 0;
+}
+
+.formulario form .grid-form .formulario-termo {
+   margin-top: 20px;
+}
+
+.formulario form .grid-form .formulario-termo label {
+    font-size: 14px;
+    
+}
+
+.formulario form .grid-form .formulario-termo label a {
+    color: #000;
+    
+}
 
 
 /* sessão 6 */
@@ -457,7 +510,7 @@ body {
 .beneficio-btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 14px 60px;
+    padding: 8px 60px;
     border-radius: 25px;
     font-size: 24px;
     text-decoration: none;
@@ -465,6 +518,7 @@ body {
     background-color: #fdd835;
     color: black;
     font-weight: normal;
+    border: 0;
 }
 
 /* sessão 7 */
