@@ -112,9 +112,10 @@
         <h2 class="video-titulo">Como a Billi funciona?</h2>
         <div class="video-po">
             <div class="video-video">
-                <iframe src="https://www.youtube.com/embed/ywCeH0YX4wQ" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ywCeH0YX4wQ?si=koEqLn_Re2f6JFEP"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -126,6 +127,33 @@
                     <h2 class="economia-titulo">Simule sua economia <br> com a Billi_</h2>
 
                     <p>Garanta descontos exclusivos com a Billi a partir da sua conta de luz.</p>
+
+                    <h3>Informe seu consumo mensal</h3>
+
+                    <!-- Valor atual -->
+                    <div id="valor-consumo">R$ 500,00</div>
+
+                    <!-- Slider -->
+                    <input type="range" id="slider-consumo" min="500" max="5000" step="50" value="500"
+                        aria-label="Informe seu consumo mensal" />
+
+
+
+                    <!-- Min e Max -->
+                    <div class="range-labels">
+                        <span>R$ 500</span>
+                        <span>R$ 5.000</span>
+                    </div>
+
+                    <!-- Economia -->
+                    <hr>
+                    <div class="economia-resultado">
+                        <span>Economia estimada</span>
+                        <span id="economia-estimada">R$ 50,00/mês</span>
+                    </div>
+
+                    <!-- Botão -->
+                    <button class="economia-btn">Calcular</button>
 
                 </div>
             </div>
@@ -385,6 +413,38 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const slider = document.getElementById("slider-consumo");
+        const valorConsumo = document.getElementById("valor-consumo");
+        const economiaEstimada = document.getElementById("economia-estimada");
+
+        function atualizarEconomia(valor) {
+            valorConsumo.textContent = `R$ ${Number(valor).toLocaleString('pt-BR')},00`;
+            const economia = valor * 0.10;
+            economiaEstimada.textContent = `R$ ${economia.toFixed(2).replace('.', ',')}/mês`;
+        }
+
+        function atualizarCorDoSlider(slider) {
+            const min = slider.min;
+            const max = slider.max;
+            const val = slider.value;
+
+            const porcentagem = ((val - min) / (max - min)) * 100;
+
+            slider.style.background = `linear-gradient(to right, #000 ${porcentagem}%, #fff ${porcentagem}%)`;
+        }
+
+        slider.addEventListener("input", () => {
+            atualizarEconomia(slider.value);
+            atualizarCorDoSlider(slider);
+        });
+
+        // Inicializa
+        atualizarEconomia(slider.value);
+        atualizarCorDoSlider(slider);
+    </script>
+
+
 </body>
 
 </html>

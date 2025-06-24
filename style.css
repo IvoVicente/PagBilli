@@ -345,29 +345,12 @@ body {
 
 }
 
-.video-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 800px;
-    width: 100%;
-    margin: 40px auto;
-
-}
-
-.video-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 /* sessão 4 */
 
 .economia {
     background-color: #E7BB0D;
+    padding: 50px;
 }
 
 .economia-po {
@@ -396,9 +379,60 @@ body {
 }
 
 .economia-imagem-t {
-    height: 50%;
+    height: 350px;
 }
 
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #000 0%, #fff 0%);
+    border-radius: 10px;
+    outline: none;
+    margin: 20px 0;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border: 4px solid #FFD700;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.economia-resultado {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.economia-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 16px;
+}
 
 /* sessão 5 */
 
@@ -444,17 +478,17 @@ body {
 }
 
 .formulario form .grid-form .formulario-termo {
-   margin-top: 20px;
+    margin-top: 20px;
 }
 
 .formulario form .grid-form .formulario-termo label {
     font-size: 14px;
-    
+
 }
 
 .formulario form .grid-form .formulario-termo label a {
     color: #000;
-    
+
 }
 
 
@@ -497,7 +531,7 @@ body {
 
 .beneficio-po-g {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     margin-top: 30px;
 }
