@@ -107,6 +107,57 @@ body {
 }
 
 
+/* Mobile First */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.mobile-menu a,
+.mobile-menu .mobile-dropdown>span {
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.mobile-dropdown-content {
+    display: none;
+    margin-left: 10px;
+}
+
+.mobile-dropdown.open .mobile-dropdown-content {
+    display: block;
+}
+
+/* Ocultar menu desktop no mobile */
+@media (max-width: 768px) {
+
+    .header-inf,
+    .header-blog {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
 /* 1 Sessão */
 
 .hero {
@@ -187,6 +238,55 @@ body {
     background-color: #fdd835;
     color: black;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+        justify-content: center;
+        text-align: center;
+        background-position: top;
+    }
+
+    .hero-overlay {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        color: white;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+        width: 100%;
+    }
+}
+
+
 
 /*2 sessão*/
 
@@ -303,19 +403,60 @@ body {
 }
 
 @media (max-width: 768px) {
-    .etapas-passos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .passo {
-        max-width: 90%;
+    .etapas {
+        padding: 40px 20px;
     }
 
     .etapas-titulo {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .etapas-passos {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .passo {
+        max-width: 100%;
+    }
+
+    .passo h3 {
+        font-size: 16px;
+    }
+
+    .passo p {
+        font-size: 14px;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4 {
+        width: 80px;
+    }
+
+    .etapas-botao {
+        margin-top: 30px;
+    }
+
+    .btn-yellow {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .etapas::before {
+        display: none;
+        /* Esconde o "B" do lado esquerdo no mobile */
+    }
+
+    .etapas-decor-right {
+        display: none;
+        /* Esconde a faixa decorativa direita */
     }
 }
+
 
 /*3 sessão*/
 
@@ -343,6 +484,30 @@ body {
     display: flex;
     justify-content: center;
 
+}
+
+
+
+@media (max-width: 768px) {
+    .video {
+        padding: 40px 20px;
+    }
+
+    .video-titulo {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .video-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-video iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 
@@ -434,6 +599,46 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 16px;
 }
 
+@media (max-width: 768px) {
+    .economia-po {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .economia-titulo {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .economia-titulo-po {
+        width: 100%;
+        text-align: center;
+    }
+
+    .economia-imagem-t {
+        height: auto;
+        max-width: 90%;
+    }
+
+    .economia-btn {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .economia-resultado {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+}
+
+
 /* sessão 5 */
 
 .formulario {
@@ -490,6 +695,49 @@ input[type="range"]::-webkit-slider-thumb {
     color: #000;
 
 }
+
+@media (max-width: 768px) {
+    .formulario {
+        padding: 30px 20px;
+    }
+
+    .formulario h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .formulario p {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .formulario form .grid-form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formulario form .grid-form div label {
+        font-size: 16px;
+    }
+
+    .formulario form .grid-form div input,
+    .formulario form .grid-form div select {
+        font-size: 16px;
+    }
+
+    .formulario form .grid-form .formulario-termo {
+        margin-top: 10px;
+    }
+
+    .beneficio-btn {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
 
 
 /* sessão 6 */
@@ -554,6 +802,55 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: normal;
     border: 0;
 }
+
+@media (max-width: 768px) {
+    .beneficio {
+        padding: 30px 20px;
+    }
+
+    .beneficio-po {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .beneficio-img img {
+        height: auto;
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .beneficio-titulo h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .beneficio-po-g {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .beneficio-po-g div {
+        text-align: center;
+    }
+
+    .beneficio-titulo h3 {
+        font-size: 18px;
+    }
+
+    .beneficio-titulo p {
+        font-size: 14px;
+    }
+
+    .beneficio-btn {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+        text-align: center;
+    }
+}
+
 
 /* sessão 7 */
 
@@ -669,6 +966,52 @@ input[type="range"]::-webkit-slider-thumb {
         align-items: center;
         margin-top: 20px;
     }
+
+    .vemser {
+        height: auto;
+        padding: 40px 20px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+
+    .vemser-po {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .vemser-text-t {
+        font-size: 100%;
+        /* remove o font-size exagerado */
+        margin-bottom: 20px;
+    }
+
+    .vemser-subtitle {
+        font-size: 20px;
+    }
+
+    .vemser-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .vemser-btn {
+        padding: 14px 40px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .vemser-btn-outline {
+        padding: 14px 40px;
+    }
+
+    .vemser-btn .arrow {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
 }
 
 /* sessão dudida*/
@@ -731,6 +1074,40 @@ input[type="range"]::-webkit-slider-thumb {
     transform: rotate(180deg);
     /* seta para baixo */
 }
+
+@media (max-width: 768px) {
+    .duvida {
+        padding: 30px 20px;
+    }
+
+    .duvida-po {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .duvida-po>div:first-child h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .accordion-header {
+        padding: 12px 0;
+    }
+
+    .accordion-header h3 {
+        font-size: 16px;
+    }
+
+    .accordion-content {
+        font-size: 14px;
+    }
+}
+
 
 /* sessão footer*/
 

@@ -16,7 +16,32 @@
     <header class="header">
         <img class="header-logo" src="imagem/Billi_.png" alt="logo">
 
+        <!-- Menu Mobile -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
+        <!-- Menu Mobile Drop -->
+        <nav class="mobile-menu" id="mobile-menu">
+            <a href="#">Billi Place</a>
+            <div class="mobile-dropdown">
+                <span>Produtos</span>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Billi Pay</a>
+                    <a href="#">Marketplace</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <span>Sobre</span>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Seja um parceiro gerador</a>
+                    <a href="#">Seja um parceiro lojista</a>
+                </div>
+            </div>
+            <a href="#">Blog</a>
+            <a href="#" class="header-button">Seja um parceiro</a>
+        </nav>
 
         <div class="header-inf">
             <a href="#">Billi Place</a>
@@ -413,36 +438,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const slider = document.getElementById("slider-consumo");
-        const valorConsumo = document.getElementById("valor-consumo");
-        const economiaEstimada = document.getElementById("economia-estimada");
-
-        function atualizarEconomia(valor) {
-            valorConsumo.textContent = `R$ ${Number(valor).toLocaleString('pt-BR')},00`;
-            const economia = valor * 0.10;
-            economiaEstimada.textContent = `R$ ${economia.toFixed(2).replace('.', ',')}/mês`;
-        }
-
-        function atualizarCorDoSlider(slider) {
-            const min = slider.min;
-            const max = slider.max;
-            const val = slider.value;
-
-            const porcentagem = ((val - min) / (max - min)) * 100;
-
-            slider.style.background = `linear-gradient(to right, #000 ${porcentagem}%, #fff ${porcentagem}%)`;
-        }
-
-        slider.addEventListener("input", () => {
-            atualizarEconomia(slider.value);
-            atualizarCorDoSlider(slider);
-        });
-
-        // Inicializa
-        atualizarEconomia(slider.value);
-        atualizarCorDoSlider(slider);
-    </script>
+    
 
 
 </body>

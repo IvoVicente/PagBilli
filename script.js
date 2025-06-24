@@ -1,10 +1,16 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
+const toggleBtn = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+toggleBtn.addEventListener("click", () => {
+    mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
 });
 
+// Abrir e fechar os dropdowns no mobile
+document.querySelectorAll(".mobile-dropdown > span").forEach(span => {
+    span.addEventListener("click", () => {
+        span.parentElement.classList.toggle("open");
+    });
+});
 
 
 function toggleAccordion(element) {
@@ -14,23 +20,33 @@ function toggleAccordion(element) {
 
 
 
-window.onload = function () {
-    const slider = document.getElementById("slider-consumo");
-    const valorConsumo = document.getElementById("valor-consumo");
-    const economiaEstimada = document.getElementById("economia-estimada");
+const slider = document.getElementById("slider-consumo");
+const valorConsumo = document.getElementById("valor-consumo");
+const economiaEstimada = document.getElementById("economia-estimada");
 
-    function atualizarEconomia(valor) {
-        valorConsumo.textContent = `R$ ${Number(valor).toLocaleString('pt-BR')},00`;
-        const economia = valor * 0.10;
-        economiaEstimada.textContent = `R$ ${economia.toFixed(2).replace('.', ',')}/mês`;
-    }
+function atualizarEconomia(valor) {
+    valorConsumo.textContent = `R$ ${Number(valor).toLocaleString('pt-BR')},00`;
+    const economia = valor * 0.10;
+    economiaEstimada.textContent = `R$ ${economia.toFixed(2).replace('.', ',')}/mês`;
+}
 
-    slider.addEventListener("input", () => {
-        atualizarEconomia(slider.value);
-    });
+function atualizarCorDoSlider(slider) {
+    const min = slider.min;
+    const max = slider.max;
+    const val = slider.value;
 
+    const porcentagem = ((val - min) / (max - min)) * 100;
+
+    slider.style.background = `linear-gradient(to right, #000 ${porcentagem}%, #fff ${porcentagem}%)`;
+}
+
+slider.addEventListener("input", () => {
     atualizarEconomia(slider.value);
-};
+    atualizarCorDoSlider(slider);
+});
 
+// Inicializa
+atualizarEconomia(slider.value);
+atualizarCorDoSlider(slider);
 
 
