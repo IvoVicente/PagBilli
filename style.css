@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .header {
@@ -409,6 +409,62 @@ body {
 
 .beneficio {
     background-color: #F7F7F7;
+    padding: 30px;
+}
+
+.beneficio-titulo h2 {
+    font-size: 34px;
+}
+
+.beneficio-img img {
+    margin-top: 30px;
+    height: 500px;
+}
+
+.beneficio-titulo h3 {
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 500;
+}
+
+.beneficio-titulo p {
+    font-size: 13.5px;
+    line-height: 18px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+
+.beneficio-po {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+
+}
+
+.beneficio-po-g {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.beneficio-po-g img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.beneficio-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 60px;
+    border-radius: 25px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+    background-color: #fdd835;
+    color: black;
+    font-weight: normal;
 }
 
 /* sessão 7 */
