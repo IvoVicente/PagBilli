@@ -441,11 +441,12 @@ body {
 }
 
 .vemser-b {
-    
+
     display: flex;
     gap: 15px;
 
 }
+
 .vemser-btn {
     padding: 15px 100px;
     border-radius: 25px;
@@ -487,28 +488,29 @@ body {
     font-size: 64px;
     line-height: 1;
     margin-bottom: 15px;
-    
+
 }
 
 .vemser-title .highlight {
     color: #fdd835;
 }
 
-.vemser-text-t{
+.vemser-text-t {
     font-size: 250px;
 }
 
 
 .vemser-btn .arrow {
-  margin-left: 25px;
-  transition: margin 0.3s ease;
-  font-weight: bold;
-  font-size: 20px; 
-  
+    margin-left: 25px;
+    transition: margin 0.3s ease;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 
 .vemser-btn:hover .arrow {
-  margin-left: 35px; /* move um pouco a seta ao passar o mouse */
+    margin-left: 35px;
+    /* move um pouco a seta ao passar o mouse */
 }
 
 @media (max-width: 768px) {
@@ -525,9 +527,65 @@ body {
     }
 }
 
+/* sessão dudida*/
 
 .duvida {
+    padding: 50px 40px;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.duvida-po {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.accordion {
+    border-bottom: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.accordion-header h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.accordion-header .arrow {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+    color: #444;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    color: #444;
+    font-size: 15px;
+    padding: 0 0;
+}
+
+.accordion.open .accordion-content {
+    max-height: 200px;
+    /* altura suficiente para o conteúdo */
+    padding: 0 0 15px 0;
+}
+
+.accordion.open .arrow {
+    transform: rotate(180deg);
+    /* seta para baixo */
 }
 
 /* sessão footer*/
@@ -550,7 +608,7 @@ body {
 
 .footer-img img {
     max-width: 60px;
-    
+
 }
 
 .footer-inf-po {
@@ -595,7 +653,7 @@ body {
     margin: 30px auto 0;
     padding-top: 20px;
     border-top: 1px solid #aaa;
-    
+
     font-size: 12px;
     line-height: 1.6;
     color: #444;

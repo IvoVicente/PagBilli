@@ -4,3 +4,11 @@ const menuToggle = document.getElementById("menu-toggle");
     menuToggle.addEventListener("click", () => {
         navMenu.classList.toggle("active");
     });
+
+
+    
+            function toggleAccordion(element) {
+                const accordion = element.parentElement;
+                accordion.classList.toggle("open");
+            }
+        
