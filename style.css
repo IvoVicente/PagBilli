@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-logo {
+    height: 30px;
+}
+
+.header-inf {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.header-inf a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-blog {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.header-blog-l {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown>span::after {
+    content: ' ▼';
+    font-size: 0.7em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.header-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-button:hover {
+    background-color: #333;
+}
+
+
+/* 1 Sessão */
+
+.hero {
+    position: relative;
+    height: 75vh;
+    background-image: url('imagem/hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-overlay {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 500px;
+}
+
+.hero-subtitle {
+    color: #ffd700;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-title .highlight {
+    color: #fdd835;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-yellow {
+    background-color: #fdd835;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fdd835;
+    border: 2px solid #fdd835;
+}
+
+.btn-outline:hover {
+    background-color: #fdd835;
+    color: black;
+}
+
+/*2 sessão*/
+
+.etapas {
+    padding: 60px 40px;
+    background-color: #F7F7F7;
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.etapas::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    background-image: url('imagem/b-amarelo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index: 0;
+}
+
+.etapas-decor-right {
+    position: absolute;
+    right: -40px;
+    bottom: 40px;
+    width: 150px;
+    height: 40px;
+    background-color: #fdd835;
+
+    z-index: 0;
+}
+
+.etapas-titulo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.etapas-passos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.passo {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.icon1 {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon2 {
+    width: 115px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon3 {
+    width: 137px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon4 {
+    width: 156px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.passo h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.passo p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.etapas-botao {
+    margin-top: 40px;
+}
+
+.btn-yellow {
+    background-color: #fdd835;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+@media (max-width: 768px) {
+    .etapas-passos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .passo {
+        max-width: 90%;
+    }
+
+    .etapas-titulo {
+        font-size: 28px;
+    }
+}
+
+/*3 sessão*/
+
+
+.video {
+    padding: 60px 40px;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.video-titulo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.video-po {
+    display: flex;
+    justify-content: center;
+
+}
+
+.video-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+
+}
+
+.video-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* sessão 4 */
+
+.economia {
+    background-color: #E7BB0D;
+}
+
+.economia-po {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.economia-titulo {
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.economia-titulo-po {
+    align-items: center;
+}
+
+.economia-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.economia-imagem-t {
+    height: 50%;
+}
+
+
+/* sessão 5 */
+
+.formulario {}
+
+
+/* sessão 6 */
+
+.beneficio {
+    background-color: #F7F7F7;
+}
+
+/* sessão 7 */
+
+.vemser {
+    position: relative;
+    height: 75vh;
+    background-image: url('imagem/vemser.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.vemser-po {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+}
+
+.vemser-po-b {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vemser-b {
+    
+    display: flex;
+    gap: 15px;
+
+}
+.vemser-btn {
+    padding: 15px 100px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.vemser-btn-yellow {
+    background-color: #fdd835;
+    color: black;
+    font-weight: bold;
+}
+
+.vemser-btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+.vemser-btn-outline {
+    background-color: transparent;
+    color: #fdd835;
+    border: 1px solid #fdd835;
+    padding: 15px 110px;
+}
+
+.vemser-btn-outline:hover {
+    background-color: #fdd835;
+    color: black;
+}
+
+.vemser-subtitle {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.vemser-title {
+    color: #fff;
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 15px;
+    
+}
+
+.vemser-title .highlight {
+    color: #fdd835;
+}
+
+.vemser-text-t{
+    font-size: 250px;
+}
+
+
+.vemser-btn .arrow {
+  margin-left: 25px;
+  transition: margin 0.3s ease;
+  font-weight: bold;
+  font-size: 20px; 
+  
+}
+
+.vemser-btn:hover .arrow {
+  margin-left: 35px; /* move um pouco a seta ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .vemser-po {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .vemser-po-b {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+
+.duvida {
+
+}
+
+.footer {
+    background-color: #F7F7F7;
+}
