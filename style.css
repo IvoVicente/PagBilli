@@ -133,6 +133,7 @@ body {
     color: #000;
     text-decoration: none;
     display: block;
+    align-items: center;
 }
 
 .mobile-dropdown-content {
@@ -155,6 +156,36 @@ body {
     .menu-toggle {
         display: block;
     }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .mobile-menu a,
+    .mobile-menu .mobile-dropdown > span {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    .mobile-menu .header-button {
+        background-color: black;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .mobile-menu .header-button:hover {
+        background-color: #333;
+    }
+
 }
 
 
@@ -194,6 +225,7 @@ body {
     line-height: 1.1;
     margin-bottom: 15px;
     font-weight: bold;
+    width: max-content;
 }
 
 .hero-title .highlight {
@@ -203,6 +235,7 @@ body {
 .hero-text {
     font-size: 20px;
     margin-bottom: 25px;
+    width: max-content;
 }
 
 .hero-buttons {
@@ -244,7 +277,7 @@ body {
         height: auto;
         padding: 40px 20px;
         justify-content: center;
-        text-align: center;
+        text-align: left;
         background-position: top;
     }
 
@@ -283,6 +316,7 @@ body {
         font-size: 16px;
         padding: 12px;
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -391,7 +425,7 @@ body {
 .btn-yellow {
     background-color: #fdd835;
     color: black;
-    padding: 12px 30px;
+    padding: 10px 35px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -444,6 +478,7 @@ body {
         width: 100%;
         padding: 14px;
         font-size: 16px;
+        font-weight: 500;
     }
 
     .etapas::before {
@@ -527,11 +562,12 @@ body {
 .economia-titulo {
     font-size: 55px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .economia-titulo-po {
     align-items: center;
@@ -589,12 +625,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 .economia-btn {
     background-color: #000;
-    color: #fff;
+    color: #fdd835;
     border: none;
-    padding: 14px 40px;
+    padding: 12px 80px;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 20px;
     font-size: 16px;
 }
@@ -608,14 +644,16 @@ input[type="range"]::-webkit-slider-thumb {
 
     .economia-titulo {
         font-size: 32px;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
 
     .economia-titulo-po {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        margin-bottom: 5px;
     }
+
 
     .economia-imagem-t {
         height: auto;
@@ -625,6 +663,7 @@ input[type="range"]::-webkit-slider-thumb {
     .economia-btn {
         width: 100%;
         padding: 14px;
+        font-weight: 500;
     }
 
     .economia-resultado {
@@ -703,12 +742,12 @@ input[type="range"]::-webkit-slider-thumb {
 
     .formulario h2 {
         font-size: 26px;
-        text-align: center;
+        text-align: left;
     }
 
     .formulario p {
         font-size: 16px;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
 
@@ -792,7 +831,7 @@ input[type="range"]::-webkit-slider-thumb {
 .beneficio-btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 8px 60px;
+    padding: 10px 60px;
     border-radius: 25px;
     font-size: 24px;
     text-decoration: none;
@@ -889,11 +928,12 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .vemser-btn {
-    padding: 15px 100px;
+    padding: 12px 100px;
     border-radius: 25px;
     font-size: 14px;
     text-decoration: none;
     transition: background 0.3s;
+    font-weight: 600;
 }
 
 .vemser-btn-yellow {
@@ -910,7 +950,8 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: transparent;
     color: #fdd835;
     border: 1px solid #fdd835;
-    padding: 15px 110px;
+    padding: 12px 110px;
+    font-weight: 600;
 }
 
 .vemser-btn-outline:hover {
@@ -1004,7 +1045,7 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     .vemser-btn-outline {
-        padding: 14px 40px;
+        padding: 14px 45px;
     }
 
     .vemser-btn .arrow {
@@ -1050,6 +1091,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .accordion-header .arrow {
+    transform: rotate(180deg);
     transition: transform 0.3s ease;
     font-size: 18px;
     color: #444;
@@ -1071,7 +1113,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .accordion.open .arrow {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     /* seta para baixo */
 }
 
@@ -1178,4 +1220,28 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 12px;
     line-height: 1.6;
     color: #444;
+}
+
+@media (max-width: 768px) {
+    .footer-po {
+        flex-direction: column;
+        align-items: flex-start; /* garante que tudo fique alinhado à esquerda */
+        gap: 20px;
+    }
+
+    .footer-img {
+        max-width: 60px;
+        margin-bottom: 20px; /* opcional para dar um respiro visual */
+    }
+
+    .footer-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-inf-po {
+        flex-direction: row;
+        gap: 30px;
+    }
 }
