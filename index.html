@@ -17,9 +17,8 @@
         <img class="header-logo" src="imagem/Billi_.png" alt="logo">
 
         <!-- Menu Mobile -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+
 
         <!-- Menu Mobile Drop -->
         <nav class="mobile-menu" id="mobile-menu">
@@ -70,6 +69,8 @@
         </div>
 
     </header>
+
+
 
 
 
@@ -212,9 +213,12 @@
                     <label>Qual é o seu distribuidor</label>
                     <select name="">
                         <option>selecione</option>
-                        <option>selecione</option>
-                        <option>selecione</option>
-                        <option>selecione</option>
+                        <option>CEMIG</option>
+                        <option>Equatorial</option>
+                        <option>Neoenergia</option>
+                        <option>Enel</option>
+                        <option>Cob</option>
+                        <option>Light</option>
                     </select>
                 </div>
                 <div class="formulario-termo">
@@ -438,8 +442,26 @@
     </footer>
 
     <script src="script.js"></script>
-    
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggles = document.querySelectorAll('.mobile-dropdown');
+
+            toggles.forEach(drop => {
+                drop.addEventListener('click', () => {
+                    console.log("Menu clicado");
+                    drop.classList.toggle('open');
+                });
+            });
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');
+            });
+        });
+    </script>
 
 </body>
 
