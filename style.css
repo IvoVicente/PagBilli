@@ -251,7 +251,6 @@ body {
     color: #ffd700;
     font-size: 20px;
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
 .hero-title {
@@ -1106,11 +1105,13 @@ textarea::placeholder {
 
     .vemser-subtitle {
         font-size: 20px;
+        text-align: left;
     }
 
     .vemser-title {
         font-size: 32px;
         line-height: 1.2;
+        text-align: left;
     }
 
     .vemser-btn {
