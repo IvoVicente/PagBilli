@@ -145,6 +145,9 @@ body {
     display: block;
 }
 
+
+
+
 @media (max-width: 768px) {
     .header {
         flex-direction: row;
@@ -154,6 +157,7 @@ body {
         padding: 10px 16px;
         gap: 8px;
     }
+
 
     .header-logo {
         height: 24px;

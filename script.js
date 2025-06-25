@@ -1,20 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggles = document.querySelectorAll('.mobile-dropdown');
 
-    toggles.forEach(drop => {
-        drop.addEventListener('click', () => {
-            drop.classList.toggle('open');
-        });
-    });
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('show');
-    });
-});
 
 // Abrir e fechar os dropdowns no mobile
 document.querySelectorAll(".mobile-dropdown > span").forEach(span => {

@@ -443,25 +443,43 @@
 
     <script src="script.js"></script>
 
+
+    <style>
+        .mobile-menu {
+            display: none;
+            background: white;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            z-index: 9999;
+            border: 1px solid #ccc;
+        }
+
+        .mobile-menu.show {
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        .menu-toggle {
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const toggles = document.querySelectorAll('.mobile-dropdown');
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
 
-            toggles.forEach(drop => {
-                drop.addEventListener('click', () => {
-                    console.log("Menu clicado");
-                    drop.classList.toggle('open');
-                });
-            });
-
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('show');
+            toggle.addEventListener('click', () => {
+                console.log('Menu clicado');
+                menu.classList.toggle('show');
             });
         });
     </script>
+
 
 </body>
 
