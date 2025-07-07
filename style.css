@@ -287,7 +287,7 @@ body {
 .btn-yellow {
     background-color: #fdd835;
     color: black;
-    
+
 }
 
 .btn-yellow:hover {
@@ -1158,6 +1158,19 @@ textarea::placeholder {
 .parceiro-img img {
     width: 350px;
     height: auto;
+}
+
+@media (max-width: 600px) {
+
+    .parceiro-titulo h2 {
+        font-size: 28px;
+    }
+
+    
+    .parceiro-img {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 
