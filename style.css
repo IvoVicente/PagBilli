@@ -397,30 +397,8 @@ body {
     overflow: hidden;
 }
 
-.etapas::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 90px;
-    height: 100%;
-    background-image: url('imagem/b-amarelo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-    z-index: 0;
-}
 
-.etapas-decor-right {
-    position: absolute;
-    right: -40px;
-    bottom: 40px;
-    width: 150px;
-    height: 40px;
-    background-color: #fdd835;
 
-    z-index: 0;
-}
 
 .etapas-titulo {
     font-size: 36px;
