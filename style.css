@@ -1132,6 +1132,36 @@ textarea::placeholder {
 
 }
 
+/* sessão parceiro*/
+.parceiro {
+    padding: 50px 40px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.parceiro-titulo h2 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.parceiro-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.parceiro-img img {
+    width: 350px;
+    height: auto;
+}
+
+
+
 /* sessão dudida*/
 
 .duvida {
