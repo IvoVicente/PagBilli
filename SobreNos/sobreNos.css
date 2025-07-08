@@ -509,6 +509,116 @@ body {
     }
 }
 
+
+/*sessão de valores*/
+
+.valores {
+    padding: 80px 40px;
+}
+
+.valores-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valores-titulo {
+    font-size: 42px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 60px;
+}
+
+/* --- A Grade dos Valores --- */
+.valores-grid {
+    display: grid;
+    /* 3 colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
+    /* Espaçamento entre as colunas e linhas */
+    column-gap: 50px;
+    row-gap: 40px;
+}
+
+/* --- Estilo de cada Item (Número + Texto) --- */
+.valor-item {
+    display: flex;
+    align-items: flex-start; /* Alinha o topo do número com o topo do texto */
+    gap: 15px; /* Espaço entre o número e o texto */
+}
+
+.valor-numero {
+    font-size: 56px;
+    font-weight: 700;
+    color: #343a40;
+    line-height: 1;
+    position: relative; /* Necessário para posicionar o ponto amarelo */
+    padding-right: 10px; /* Espaço para o ponto não sobrepor o texto */
+}
+
+/* O ponto amarelo ao lado do número */
+.valor-numero::after {
+    content: '';
+    position: absolute;
+    top: 38px; /* Ajuste a posição vertical do ponto */
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #FFC107; /* Cor amarela */
+    border-radius: 50%;
+}
+
+.valor-texto {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.valor-texto strong {
+    color: #212529;
+    font-weight: 600;
+}
+
+
+/* --- RESPONSIVIDADE --- */
+
+/* Para Tablets */
+@media (max-width: 1024px) {
+    .valores-grid {
+        /* A grade vira de 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 768px) {
+    .valores {
+        padding: 60px 20px;
+    }
+
+    .valores-titulo {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .valores-grid {
+        /* A grade vira de 1 coluna */
+        grid-template-columns: 1fr;
+    }
+
+    .valor-numero {
+        font-size: 40px;
+    }
+
+    .valor-numero::after {
+        width: 8px;
+        height: 8px;
+        top: 6px;
+    }
+
+    .valor-texto {
+        font-size: 15px;
+    }
+}
+
 /* sessão 7 */
 
 .vemser {
