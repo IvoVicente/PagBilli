@@ -590,54 +590,6 @@ body {
 /*3 sessão*/
 
 
-.video {
-    padding: 60px 40px;
-    background-color: #fff;
-    position: relative;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
-}
-
-.video-titulo {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 50px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.video-po {
-    display: flex;
-    justify-content: center;
-
-}
-
-
-
-@media (max-width: 768px) {
-    .video {
-        padding: 40px 20px;
-    }
-
-    .video-titulo {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .video-video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-
-    .video-video iframe {
-        width: 100% !important;
-        height: auto !important;
-    }
-}
 
 
 /* sessão 4 */
@@ -654,7 +606,7 @@ body {
 }
 
 .economia-titulo {
-    font-size: 55px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
     max-width: 900px;
@@ -721,12 +673,105 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: #000;
     color: #fdd835;
     border: none;
-    padding: 12px 80px;
+    padding: 12px 35px;
     border-radius: 30px;
     cursor: pointer;
     font-weight: 500;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.economia-imagem {
+    padding: 17px 20px;
+    width: 60%;
+}
+
+.beneficios-container {
+    display: grid;
+    /* Cria uma grade com 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px; /* Espaçamento entre os cards */
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+/* --- Estilo Base do Card --- */
+.card {
+    padding: 15px;
+    border-radius: 20px; /* Bordas bem arredondadas */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre o ícone e o título */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Estilo do Ícone e Título --- */
+.card-icon {
+    /* Estilize seu ícone aqui. Ex: */
+    font-size: 32px; /* Placeholder para o tamanho do ícone */
+    color: #FFC107; /* Cor amarela para o ícone escuro */
+    width: 40px; /* Largura fixa para o container do ícone */
+    height: 40px; /* Altura fixa */
+}
+
+.card-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* --- Variações de Cor dos Cards --- */
+.card-light {
+    background-color: #f8f9fa; /* Um branco levemente acinzentado */
+    color: #343a40; /* Cor do texto escuro */
+}
+
+.card-dark {
+    background-color: #343a40; /* Cor de fundo escura */
+    color: #f8f9fa; /* Cor do texto claro */
+}
+
+/* Para os ícones nos cards claros, eles precisam ter a cor escura */
+.card-light .card-icon {
+    color: #343a40;
+}
+
+
+/* --- RESPONSIVIDADE (Celular e Tablet) --- */
+
+/* Para tablets e telas um pouco menores */
+@media (max-width: 992px) {
+    .beneficios-container {
+        /* A grade agora terá 3 colunas */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+    .beneficios-container {
+        /* A grade agora terá 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para celulares bem pequenos */
+@media (max-width: 480px) {
+    .beneficios-container {
+        /* A grade agora terá 1 coluna, empilhando os cards */
+        grid-template-columns: 1fr;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 768px) {
