@@ -460,19 +460,19 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .passo {
     flex: 1 1 200px;
-    max-width: 250px;
+    max-width: 200px;
     text-align: center;
 }
 
 .icon1 {
-    width: 100px;
+    width: 90px;
     height: auto;
     margin-bottom: 15px;
 }
@@ -491,6 +491,11 @@ body {
 
 .icon4 {
     width: 156px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.icon5 {
+    width: 120px;
     height: auto;
     margin-bottom: 15px;
 }
