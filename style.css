@@ -225,16 +225,7 @@ body {
 
 /* 1 Sessão */
 
-.hero {
-    position: relative;
 
-
-    background-size: contain;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 .hero-overlay {
     display: flex;
@@ -429,6 +420,8 @@ body {
     background-color: #fdd835;
     /* Cor da bolinha ativa */
 }
+
+
 
 
 

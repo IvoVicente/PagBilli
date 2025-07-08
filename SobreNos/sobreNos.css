@@ -224,6 +224,290 @@ body {
 }
 
 
+/* 1 Sessão */
+
+
+
+.hero-overlay {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 1500px;
+}
+
+.hero-subtitle {
+    color: #ffd700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    font-weight: bold;
+    width: max-content;
+}
+
+.hero-title .highlight {
+    color: #fdd835;
+}
+
+.hero-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+    width: max-content;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-yellow {
+    background-color: #fdd835;
+    color: black;
+
+}
+
+.btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fdd835;
+    border: 2px solid #fdd835;
+}
+
+.btn-outline:hover {
+    background-color: #fdd835;
+    color: black;
+}
+
+.hero-title {
+    width: max-content;
+}
+
+.hero-text {
+    width: max-content;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+        justify-content: center;
+        text-align: left;
+        background-position: top center;
+        background-size: cover;
+    }
+
+    .hero-overlay {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        color: white;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+        text-align: left;
+        word-break: break-word;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 14px 18px;
+        width: 90%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .hero-title,
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+
+}
+
+/* Remova a estilização de .hero e aplique em .swiper-slide ou .slide-background */
+.swiper-slide {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    /* Cor do texto padrão */
+}
+
+/* Crie uma classe para o fundo para facilitar */
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background-repeat: no-repeat;
+    /* Fica atrás do conteúdo */
+}
+
+/* O resto do seu CSS para .hero-overlay, .hero-content, etc. pode continuar praticamente igual! */
+.hero-overlay {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Opcional: Estilizar as setas e bolinhas para combinar com seu site */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fdd835;
+    /* Cor das setas */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fdd835;
+    /* Cor da bolinha ativa */
+}
+
+/* sessão sobre*/
+
+/* --- Estilos Gerais da Seção Sobre --- */
+.sobre {
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px 40px;
+    background-color: #fff;
+    /* Fundo branco como na imagem */
+}
+
+.sobre-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #212529;
+}
+
+/* --- A Grade de Conteúdo --- */
+.sobre-grid {
+    display: grid;
+    /* Cria 2 colunas de tamanho igual */
+    grid-template-columns: repeat(2, 1fr);
+    /* Espaçamento horizontal e vertical entre os blocos */
+    gap: 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Estilo de cada Bloco (Texto + Imagem) --- */
+.sobre-bloco {
+    display: flex;
+    flex-direction: column;
+    /* Empilha o texto e a imagem verticalmente */
+}
+
+.sobre-bloco h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+.sobre-bloco p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #495057;
+    /* Garante que o parágrafo cresça e empurre a imagem para baixo, alinhando as imagens */
+    flex-grow: 1;
+}
+
+.sobre-bloco img {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 25px;
+    /* Espaço entre o parágrafo e a imagem */
+    object-fit: cover;
+    align-self: center;
+}
+
+/* --- RESPONSIVIDADE PARA CELULAR E TABLET --- */
+@media (max-width: 992px) {
+    .sobre-grid {
+        /* A grade vira de 1 coluna em telas menores */
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre {
+        padding: 40px 20px;
+    }
+
+    .sobre-titulo {
+        font-size: 28px;
+    }
+
+    .sobre-bloco h3 {
+        font-size: 20px;
+    }
+
+    .sobre-bloco p {
+        font-size: 15px;
+    }
+}
 
 /* sessão 7 */
 

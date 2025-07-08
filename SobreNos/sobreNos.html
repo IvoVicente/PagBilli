@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="sobreNos.css">
     <link rel="icon" type="image/png" href="../imagem/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -72,6 +73,111 @@
         </div>
     </header>
 
+    <section class="hero">
+
+
+        <div class="swiper hero-carousel">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="slide-background" style="background-image: url('../imagem/hero.png');"></div>
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <p class="hero-subtitle">serviços digitais</p>
+                            <h1 class="hero-title">
+                                Você faz a compra,<br>
+                                <span class="highlight">a gente cuida do desconto.</span>
+                            </h1>
+                            <p class="hero-text">Aproveite os melhores descontos em nossa plataforma.</p>
+                            <div class="hero-buttons">
+                                <a href="https://billi-web-alpha.vercel.app/" class="btn btn-yellow">Acessar</a>
+                                <a href="#" class="btn btn-outline">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-background" style="background-image: url('../imagem/hero-1.png');"></div>
+                    <div class="hero-overlay">
+                        <div class="hero-content">
+                            <p class="hero-subtitle">serviços digitais</p>
+                            <h1 class="hero-title">
+                                Obtenha descontos<br>
+                                <span class="highlight">na sua conta de energia</span>
+                            </h1>
+                            <p class="hero-text">Com a Billi você garante até 30% OFF na conta de luz</p>
+                            <div class="hero-buttons">
+                                <a href="https://billi-web-alpha.vercel.app/" class="btn btn-yellow">Acessar</a>
+                                <a href="#" class="btn btn-outline">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+
+    <section class="sobre">
+        <div class="sobre-titulo">
+            <h2>Sobre nós</h2>
+        </div>
+
+        <div class="sobre-grid">
+
+            <div class="sobre-bloco">
+                <h3>Quem Somos</h3>
+                <p>
+                    A Billi é uma plataforma digital que conecta o consumidor ao futuro da energia e das finanças.
+                    Atuamos como um hub inteligente de oportunidades, permitindo que pessoas e empresas migrem para
+                    soluções de energia mais baratas...
+                </p>
+                <img src="../imagem/sobre-1.png" alt="Pessoas analisando dados em um tablet">
+            </div>
+
+            <div class="sobre-bloco">
+                <img src="../imagem/sobre-3.png" alt="Homem de negócios olhando para o lado">
+                <h3>Missão</h3>
+                <p>
+                    Transformar a economia de energia em liquidez imediata e oportunidades financeiras, democratizando o
+                    acesso ao mercado livre de energia e soluções financeiras inteligentes.
+                </p>
+
+            </div>
+
+            <div class="sobre-bloco">
+                <h3>Visão</h3>
+                <p>
+                    Ser a principal plataforma de Energy Switch e Finance Hub da América Latina, facilitando a migração
+                    energética e o acesso a crédito de forma simples, digital e segura.
+                </p>
+                <img src="../imagem/sobre-2.png" alt="Mulher sorrindo em ambiente de trabalho">
+            </div>
+
+
+
+            <div class="sobre-bloco">
+                <img src="../imagem/sobre-4.png" alt="Pessoas colaborando em reunião">
+                <h3>Propósito</h3>
+                <p>
+                    Colocar o poder da energia e das finanças nas mãos do consumidor. Queremos que cada cliente veja na
+                    BILLI não apenas uma plataforma, mas um parceiro de transformação...
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
     <section class="vemser">
         <div class="vemser-po">
             <div class="vemser-text-t">
@@ -133,7 +239,36 @@
             </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+        <script>
+            const swiper = new Swiper('.hero-carousel', {
+                // Configurações principais
+                loop: true, // Faz o carrossel girar em loop
+                effect: 'fade', // Efeito de transição, 'fade' é ótimo para heros
+                fadeEffect: {
+                    crossFade: true
+                },
+
+                // Autoplay (opcional, para passar slides sozinho)
+                autoplay: {
+                    delay: 5000, // Tempo em milissegundos (5 segundos)
+                    disableOnInteraction: false,
+                },
+
+                // Paginação (as bolinhas)
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // Navegação (as setas)
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
 
 
 </body>
