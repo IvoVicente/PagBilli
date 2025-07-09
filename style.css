@@ -34,6 +34,11 @@ body {
     text-decoration: none;
     color: black;
 }
+.header-inf a:hover {
+    
+    color: black;
+}
+
 
 .header-blog {
     display: flex;
@@ -375,55 +380,87 @@ body {
 
 }
 
-/* Remova a estilização de .hero e aplique em .swiper-slide ou .slide-background */
-.swiper-slide {
-    position: relative;
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    /* Cor do texto padrão */
-}
-
-/* Crie uma classe para o fundo para facilitar */
-.slide-background {
+.carousel-item::after {
+    content: "";
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    background-repeat: no-repeat;
-    /* Fica atrás do conteúdo */
+    right: 0;
+
 }
 
-/* O resto do seu CSS para .hero-overlay, .hero-content, etc. pode continuar praticamente igual! */
-.hero-overlay {
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-    width: 100%;
-    height: 100%;
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-60%);
+    bottom: auto;
+    left: 12%;
+    right: 12%;
+    text-align: left;
+    /* Garante o alinhamento à esquerda */
 }
 
-/* Opcional: Estilizar as setas e bolinhas para combinar com seu site */
-.swiper-button-next,
-.swiper-button-prev {
+/* 3. MUDANDO A COR DO TÍTULO PRINCIPAL (H1) PARA AMARELO */
+.carousel-caption h1 {
+    color: #ffc107;
+    /* Código da cor amarela do Bootstrap */
+    font-weight: 700;
+    /* Deixa a fonte mais grossa (bold) */
+    font-size: 48px;
+    line-height: 50px;
+}
+
+.carousel-caption span {
+    color: #fff;
+
+}
+
+/* 4. AJUSTANDO A COR DO INDICADOR ATIVO */
+.carousel-indicators .active {
+    background-color: #ffc107;
+}
+
+/* Opcional: Estilo para os botões ficarem mais parecidos */
+.btn-warning {
+    border-radius: 5px;
+    /* Bordas um pouco mais arredondadas */
+    padding: 6px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+
+
+h6 {
+    font-size: 20px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+}
+
+.btn-outline-amarelo-custom {
     color: #fdd835;
-    /* Cor das setas */
+    /* Cor do texto */
+    border-color: #fdd835;
+    /* Cor da borda */
+    border: 1px solid #fdd835;
+    /* A borda: espessura, tipo e cor */
+    padding: 5px 30px; 
+    /* Espaçamento interno para o texto não colar na borda */
+    border-radius: 50px;
 }
 
-.swiper-pagination-bullet-active {
+/* Efeito para quando o mouse passa por cima: 
+  o fundo fica amarelo e o texto fica preto para dar contraste.
+*/
+.btn-outline-amarelo-custom:hover {
     background-color: #fdd835;
-    /* Cor da bolinha ativa */
+    /* Cor do fundo */
+    color: #212529;
+    /* Cor do texto (preto) */
+
 }
-
-
-
-
 
 /*2 sessão*/
 
@@ -487,6 +524,7 @@ body {
     height: auto;
     margin-bottom: 15px;
 }
+
 .icon5 {
     width: 120px;
     height: auto;
@@ -683,34 +721,45 @@ input[type="range"]::-webkit-slider-thumb {
     display: grid;
     /* Cria uma grade com 4 colunas de tamanho igual */
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px; /* Espaçamento entre os cards */
-    max-width: 1200px; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    max-width: 1200px;
+    /* Largura máxima do container */
+    margin: 0 auto;
+    /* Centraliza o container na página */
 }
 
 /* --- Estilo Base do Card --- */
 .card {
     padding: 15px;
-    border-radius: 20px; /* Bordas bem arredondadas */
+    border-radius: 20px;
+    /* Bordas bem arredondadas */
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaço entre o ícone e o título */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    gap: 15px;
+    /* Espaço entre o ícone e o título */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    transform: translateY(-5px);
+    /* Efeito de levantar ao passar o mouse */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* --- Estilo do Ícone e Título --- */
 .card-icon {
     /* Estilize seu ícone aqui. Ex: */
-    font-size: 32px; /* Placeholder para o tamanho do ícone */
-    color: #FFC107; /* Cor amarela para o ícone escuro */
-    width: 40px; /* Largura fixa para o container do ícone */
-    height: 40px; /* Altura fixa */
+    font-size: 32px;
+    /* Placeholder para o tamanho do ícone */
+    color: #FFC107;
+    /* Cor amarela para o ícone escuro */
+    width: 40px;
+    /* Largura fixa para o container do ícone */
+    height: 40px;
+    /* Altura fixa */
 }
 
 .card-title {
@@ -722,13 +771,17 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* --- Variações de Cor dos Cards --- */
 .card-light {
-    background-color: #f8f9fa; /* Um branco levemente acinzentado */
-    color: #343a40; /* Cor do texto escuro */
+    background-color: #f8f9fa;
+    /* Um branco levemente acinzentado */
+    color: #343a40;
+    /* Cor do texto escuro */
 }
 
 .card-dark {
-    background-color: #343a40; /* Cor de fundo escura */
-    color: #f8f9fa; /* Cor do texto claro */
+    background-color: #343a40;
+    /* Cor de fundo escura */
+    color: #f8f9fa;
+    /* Cor do texto claro */
 }
 
 /* Para os ícones nos cards claros, eles precisam ter a cor escura */
