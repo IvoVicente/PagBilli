@@ -34,8 +34,9 @@ body {
     text-decoration: none;
     color: black;
 }
+
 .header-inf a:hover {
-    
+
     color: black;
 }
 
@@ -424,7 +425,7 @@ body {
 
 /* Opcional: Estilo para os botões ficarem mais parecidos */
 .btn-warning {
-    border-radius: 5px;
+
     /* Bordas um pouco mais arredondadas */
     padding: 6px 35px;
     text-decoration: none;
@@ -453,7 +454,7 @@ h6 {
     /* Cor da borda */
     border: 1px solid #fdd835;
     /* A borda: espessura, tipo e cor */
-    padding: 5px 30px; 
+    padding: 5px 30px;
     /* Espaçamento interno para o texto não colar na borda */
     border-radius: 50px;
 }
@@ -742,24 +743,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* --- Estilo Base do Card --- */
-.card {
-    padding: 15px;
-    border-radius: 20px;
-    /* Bordas bem arredondadas */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* Espaço entre o ícone e o título */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card:hover {
-    transform: translateY(-5px);
-    /* Efeito de levantar ao passar o mouse */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
 
 /* --- Estilo do Ícone e Título --- */
 .card-icon {
@@ -774,27 +758,74 @@ input[type="range"]::-webkit-slider-thumb {
     /* Altura fixa */
 }
 
-.card-title {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.1;
-    margin: 0;
-}
+
 
 /* --- Variações de Cor dos Cards --- */
 .card-light {
     background-color: #f8f9fa;
     /* Um branco levemente acinzentado */
-    color: #343a40;
+
     /* Cor do texto escuro */
+    padding: 15px;
+    border-radius: 24px;
+    /* Bordas bem arredondadas */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre o ícone e o título */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    color: black;
+
+}
+
+.card-light h3 {
+    font-size: 14px;
+}
+
+.card-light:hover {
+    transform: translateY(-5px);
+    /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card-dark {
     background-color: #343a40;
     /* Cor de fundo escura */
-    color: #f8f9fa;
+    color: white;
     /* Cor do texto claro */
+    padding: 15px;
+    border-radius: 24px;
+    /* Bordas bem arredondadas */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre o ícone e o título */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    
 }
+
+.card-dark h3 {
+    font-size: 14px;
+}
+
+.card-dark:hover {
+    transform: translateY(-5px);
+    /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
 
 /* Para os ícones nos cards claros, eles precisam ter a cor escura */
 .card-light .card-icon {
