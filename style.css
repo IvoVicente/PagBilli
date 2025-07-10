@@ -663,6 +663,10 @@ h6 {
     align-items: center;
 }
 
+.economia-titulo-po-po {
+    line-height: 0.5;
+}
+
 .economia-imagem {
     display: flex;
     justify-content: center;
