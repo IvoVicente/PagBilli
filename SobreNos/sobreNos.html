@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billi_</title>
     <link rel="stylesheet" href="sobreNos.css">
-    <link rel="icon" type="image/png" href="../imagem/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="imagem/favicon.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,6 +28,8 @@
         <!-- Menu Mobile Drop -->
         <nav class="mobile-menu" id="mobile-menu">
             <a href="https://billi-web-alpha.vercel.app/">Billi Place</a>
+            <a href="#comofuciona">Como funciona</a>
+            <a href="#beneficio">Benefícios</a>
             <div class="mobile-dropdown">
                 <span>Produtos</span>
                 <div class="mobile-dropdown-content">
@@ -39,13 +45,14 @@
                     <a href="#">Seja um parceiro lojista</a>
                 </div>
             </div>
-            <a href="#">Blog</a>
             <a href="https://960b23b0-c2bf-4ac4-984d-ba82c85bb109-00-eqmd0y9yl3wq.kirk.replit.dev/login"
                 class="header-button">Seja um parceiro</a>
         </nav>
 
-        <div class="header-inf">
+        <div class=" header-inf">
             <a href="https://billi-web-alpha.vercel.app/">Billi Place</a>
+            <a href="#comofuciona">Como funciona</a>
+            <a href="#beneficio">Benefícios</a>
             <div class="dropdown">
                 <span>Produtos</span>
                 <div class="dropdown-content">
@@ -64,66 +71,93 @@
         </div>
 
         <div class="header-blog">
-            <a class="header-blog-l" href="#">Blog</a>
             <div>
                 <a class="header-button"
                     href="https://960b23b0-c2bf-4ac4-984d-ba82c85bb109-00-eqmd0y9yl3wq.kirk.replit.dev/login">Seja um
                     parceiro</a>
             </div>
         </div>
+
     </header>
 
+
+
     <section class="hero">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../imagem/hero.png" alt="Primeiro Slide">
 
-
-        <div class="swiper hero-carousel">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <div class="slide-background" style="background-image: url('../imagem/hero.png');"></div>
-                    <div class="hero-overlay">
-                        <div class="hero-content">
-                            <p class="hero-subtitle">serviços digitais</p>
-                            <h1 class="hero-title">
-                                Você faz a compra,<br>
-                                <span class="highlight">a gente cuida do desconto.</span>
-                            </h1>
-                            <p class="hero-text">Aproveite os melhores descontos em nossa plataforma.</p>
-                            <div class="hero-buttons">
-                                <a href="https://billi-web-alpha.vercel.app/" class="btn btn-yellow">Acessar</a>
-                                <a href="#" class="btn btn-outline">Saiba mais</a>
-                            </div>
-                        </div>
+                    <div class="carousel-caption text-left">
+                        <h6>serviços digitais</h6>
+                        <h1 class="display-4"><span>Você faz a compra,</span><br>a gente cuida do desconto.</h1>
+                        <p>Aproveite os melhores descontos em nossa plataforma.</p>
+                        <a href="#" class="btn-warning">Acessar</a>
+                        <a href="#" class="btn-outline-amarelo-custom ml-2">Saiba mais</a>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slide-background" style="background-image: url('../imagem/hero-1.png');"></div>
-                    <div class="hero-overlay">
-                        <div class="hero-content">
-                            <p class="hero-subtitle">serviços digitais</p>
-                            <h1 class="hero-title">
-                                Obtenha descontos<br>
-                                <span class="highlight">na sua conta de energia</span>
-                            </h1>
-                            <p class="hero-text">Com a Billi você garante até 30% OFF na conta de luz</p>
-                            <div class="hero-buttons">
-                                <a href="https://billi-web-alpha.vercel.app/" class="btn btn-yellow">Acessar</a>
-                                <a href="#" class="btn btn-outline">Saiba mais</a>
-                            </div>
-                        </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../imagem/hero-1.png" alt="Segundo Slide">
+
+                    <div class="carousel-caption text-left">
+                        <h6>serviços digitais</h6>
+                        <h1 class="display-4"><span>Obtenha descontos</span><br>na sua conta de energia</h1>
+                        <p>Com a Billi você garante até 30% OFF na conta de luz</p>
+                        <a href="#" class="btn-warning">Acessar</a>
+                        <a href="#" class="btn-outline-amarelo-custom  ml-2">Saiba mais</a>
                     </div>
                 </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../imagem/hero-3.png" alt="Terceiro Slide">
 
+                    <div class="carousel-caption text-left">
+                        <h6>antecipação da economia</h6>
+                        <h1 class="display-4"><span>Receba parte da sua<br>
+                                economia futura</span><br>sem esperar o ciclo completo</h1>
+                        <p>Por que esperar mais tempo se com Billi você pode antecipar?</p>
+                        <a href="#" class="btn-warning">Acessar</a>
+                        <a href="#" class="btn-outline-amarelo-custom ml-2">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../imagem/hero-2.png" alt="Quarta Slide">
 
-
-
+                    <div class="carousel-caption text-left">
+                        <h6>prêmio pela portabilidade</h6>
+                        <h1 class="display-4"><span>Ao optar por uma <br> comercializadora parceira,</span><br>você
+                            recebe um bônus <br>
+                            financeiro direto.</h1>
+                        <p>Temos uma rede de parceiros que garantem os benefícios para você</p>
+                        <a href="#" class="btn-warning">Acessar</a>
+                        <a href="#" class="btn-outline-amarelo-custom ml-2">Saiba mais</a>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
-            <div class="swiper-pagination"></div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
     </section>
 
 

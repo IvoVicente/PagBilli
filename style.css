@@ -109,6 +109,8 @@ body {
 
 .header-button:hover {
     background-color: #333;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -429,6 +431,11 @@ body {
     border-radius: 50px;
 }
 
+.btn-warning:hover {
+    text-decoration: none;
+    color: #000;
+}
+
 
 
 h6 {
@@ -459,7 +466,7 @@ h6 {
     /* Cor do fundo */
     color: #212529;
     /* Cor do texto (preto) */
-
+    text-decoration: none;
 }
 
 /*2 sessão*/
@@ -545,6 +552,11 @@ h6 {
 
 .etapas-botao {
     margin-top: 40px;
+}
+
+.etapas-botao a:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 .btn-yellow {
@@ -1038,6 +1050,11 @@ textarea::placeholder {
     border: 0;
 }
 
+.beneficio-btn:hover {
+    text-decoration: none;
+    color: #000;
+}
+
 @media (max-width: 768px) {
     .beneficio {
         padding: 30px 20px;
@@ -1135,11 +1152,13 @@ textarea::placeholder {
 .vemser-btn-yellow {
     background-color: #fdd835;
     color: black;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .vemser-btn-yellow:hover {
     background-color: #fbc02d;
+    color: black;
+    text-decoration: none;
 }
 
 .vemser-btn-outline {
@@ -1153,6 +1172,7 @@ textarea::placeholder {
 .vemser-btn-outline:hover {
     background-color: #fdd835;
     color: black;
+    text-decoration: none;
 }
 
 .vemser-subtitle {
@@ -1437,8 +1457,9 @@ textarea::placeholder {
 }
 
 .footer-inf a:hover {
-    text-decoration: underline;
+    color: #333;
 }
+
 
 .footer-icon-po {
     display: flex;
