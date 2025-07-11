@@ -346,9 +346,11 @@ h6 {
         /* CORRIGIDO: Centraliza o bloco verticalmente de forma correta. */
         text-align: left;
         height: 100%;
+        width: 100%;
         /* REMOVIDO: width: 155px; -> Deixe a largura ser fluida para se adaptar à tela. */
         /* CORRIGIDO: line-height para um valor legível (maior que 1). */
         line-height: 1.5;
+
     }
 
     /* A classe .poss parece não estar sendo usada no HTML, pode ser removida se for o caso. */
@@ -356,7 +358,8 @@ h6 {
 
     .carousel-caption h6 {
         /* AUMENTADO: O tamanho da fonte para melhor legibilidade. */
-        font-size: 20px;
+        font-size: 16px;
+        width: 60%;
     }
 
     .carousel-caption h1 {
@@ -364,6 +367,7 @@ h6 {
         font-size: 20px;
         /* CORRIGIDO: line-height para um valor legível. */
         line-height: 1;
+        width: 60%;
     }
 
     .carousel-caption p {
@@ -371,6 +375,8 @@ h6 {
         font-size: 15px;
         margin-bottom: 10px;
         /* Aumentado um pouco o espaço antes dos botões. */
+        width: 60%;
+
     }
 
     /* Agrupa os botões e os coloca um embaixo do outro */
