@@ -233,153 +233,6 @@ body {
 
 
 
-.hero-overlay {
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-}
-
-.hero-content {
-    color: white;
-    max-width: 1500px;
-}
-
-.hero-subtitle {
-    color: #ffd700;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.hero-title {
-    font-size: 38px;
-    line-height: 1.1;
-    margin-bottom: 15px;
-    font-weight: bold;
-    width: max-content;
-}
-
-.hero-title .highlight {
-    color: #fdd835;
-}
-
-.hero-text {
-    font-size: 20px;
-    margin-bottom: 25px;
-    width: max-content;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.btn-yellow {
-    background-color: #fdd835;
-    color: black;
-
-}
-
-.btn-yellow:hover {
-    background-color: #fbc02d;
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: #fdd835;
-    border: 2px solid #fdd835;
-}
-
-.btn-outline:hover {
-    background-color: #fdd835;
-    color: black;
-}
-
-.hero-title {
-    width: max-content;
-}
-
-.hero-text {
-    width: max-content;
-}
-
-
-@media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 40px 20px;
-        justify-content: center;
-        text-align: left;
-        background-position: top center;
-        background-size: cover;
-    }
-
-    .hero-overlay {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        width: 100%;
-        color: white;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-        margin-bottom: 8px;
-        text-align: left;
-    }
-
-    .hero-title {
-        font-size: 26px;
-        line-height: 1.3;
-        margin-bottom: 12px;
-        text-align: left;
-        word-break: break-word;
-    }
-
-    .hero-text {
-        font-size: 16px;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        align-items: center;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 14px 18px;
-        width: 90%;
-        max-width: 280px;
-        text-align: center;
-    }
-
-    .hero-title,
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-
-}
 
 .carousel-item::after {
     content: "";
@@ -399,6 +252,7 @@ body {
     right: 12%;
     text-align: left;
     /* Garante o alinhamento à esquerda */
+    width: 620px;
 }
 
 /* 3. MUDANDO A COR DO TÍTULO PRINCIPAL (H1) PARA AMARELO */
@@ -423,11 +277,16 @@ body {
 
 /* Opcional: Estilo para os botões ficarem mais parecidos */
 .btn-warning {
-    border-radius: 5px;
+
     /* Bordas um pouco mais arredondadas */
     padding: 6px 35px;
     text-decoration: none;
     border-radius: 50px;
+}
+
+.btn-warning:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 
@@ -460,8 +319,93 @@ h6 {
     /* Cor do fundo */
     color: #212529;
     /* Cor do texto (preto) */
-
+    text-decoration: none;
 }
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .carousel,
+    .slide,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        top: 10%;
+        transform: translateY(-1%);
+        /* CORRIGIDO: Centraliza o bloco verticalmente de forma correta. */
+        text-align: left;
+        height: 100%;
+        width: 100%;
+        /* REMOVIDO: width: 155px; -> Deixe a largura ser fluida para se adaptar à tela. */
+        /* CORRIGIDO: line-height para um valor legível (maior que 1). */
+        line-height: 1.5;
+
+    }
+
+    /* A classe .poss parece não estar sendo usada no HTML, pode ser removida se for o caso. */
+    /* .poss { display: flex; } */
+
+    .carousel-caption h6 {
+        /* AUMENTADO: O tamanho da fonte para melhor legibilidade. */
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .carousel-caption h1 {
+        /* AUMENTADO: Fonte maior e mais impactante, mesmo no celular. */
+        font-size: 20px;
+        /* CORRIGIDO: line-height para um valor legível. */
+        line-height: 1;
+        width: 60%;
+    }
+
+    .carousel-caption p {
+        /* AUMENTADO: O tamanho da fonte para melhor legibilidade. */
+        font-size: 15px;
+        margin-bottom: 10px;
+        /* Aumentado um pouco o espaço antes dos botões. */
+        width: 60%;
+
+    }
+
+    /* Agrupa os botões e os coloca um embaixo do outro */
+    .carousel-caption .btn-warning,
+    .carousel-caption .btn-outline-amarelo-custom {
+        /* CORRIGIDO: display: block para empilhar os botões corretamente. */
+        display: block;
+
+        /* CORRIGIDO: Use 100% para ocupar o espaço e max-width para limitar. */
+        width: 100%;
+        max-width: 280px;
+        /* Limita a largura máxima do botão em telas maiores de celular. */
+
+        margin-bottom: 10px;
+        /* Espaço entre eles. */
+        padding: 12px;
+        /* Um padding mais generoso para facilitar o toque. */
+        text-align: center;
+    }
+
+    .carousel-caption .btn-outline-amarelo-custom {
+        margin-left: 0 !important;
+        /* Mantido: Remove a margem da classe .ml-2. */
+    }
+}
+
+
 
 /* sessão sobre*/
 
