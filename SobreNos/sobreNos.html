@@ -394,7 +394,8 @@
                         <div class="footer-icon-po">
                             <a href="#"><img src="../imagem/footer-face.png"></a>
                             <a href="https://www.instagram.com/billicapital"><img src="../imagem/footer-ins.png"></a>
-                            <a href="https://www.linkedin.com/company/billifinance/"><img src="../imagem/footer-inl.png"></a>
+                            <a href="https://www.linkedin.com/company/billifinance/"><img
+                                    src="../imagem/footer-inl.png"></a>
                             <a href="#"><img src="../imagem/footer-you.png"></a>
                         </div>
                         <p>Central de Relacionamento:<br>(11) 91495-8395</p>
@@ -438,6 +439,44 @@
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+            });
+        </script>
+
+        <script src="/script.js"></script>
+
+        <style>
+            .mobile-menu {
+                display: none;
+                background: white;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                z-index: 9999;
+                border: 1px solid #ccc;
+            }
+
+            .mobile-menu.show {
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                font-size: 24px;
+                cursor: pointer;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+
+                toggle.addEventListener('click', () => {
+                    console.log('Menu clicado');
+                    menu.classList.toggle('show');
+                });
             });
         </script>
 
