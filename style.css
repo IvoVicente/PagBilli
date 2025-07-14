@@ -244,6 +244,10 @@ body {
 
 }
 
+.carousel-item h6 {
+    color: #ffc107;
+}
+
 .carousel-caption {
     top: 50%;
     transform: translateY(-60%);
