@@ -510,7 +510,7 @@ h6 {
 }
 
 .valores-titulo {
-    font-size: 34px;
+    font-size: 42px;
     font-weight: 700;
     color: #212529;
     margin-bottom: 60px;
@@ -518,18 +518,7 @@ h6 {
 
 .valor-item-po {
     display: flex;
-    justify-content: center;
-    width: 370px;
-}
-
-/* --- A Grade dos Valores --- */
-.valores-grid {
-    display: grid;
-    /* 3 colunas de tamanho igual */
-    grid-template-columns: repeat(3, 1fr);
-    /* Espaçamento entre as colunas e linhas */
-    column-gap: 50px;
-    row-gap: 40px;
+    justify-content: space-around ;
     
 }
 
@@ -540,6 +529,7 @@ h6 {
     /* Alinha o topo do número com o topo do texto */
     gap: 15px;
     /* Espaço entre o número e o texto */
+    width: 375px;
 }
 
 .valor-numero {
