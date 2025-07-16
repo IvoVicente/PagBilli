@@ -623,15 +623,15 @@ h6 {
 
 /* --- Estilo do Texto Introdutório --- */
 .posicionamento-intro h2 {
-    font-size: 28px;
+    font-size: 42px;
     font-weight: 700;
     color: #212529;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .posicionamento-intro p,
 .posicionamento-intro li {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.6;
     color: #495057;
 }
