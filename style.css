@@ -423,12 +423,17 @@ h6 {
 
 
 .etapas-titulo {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.etapas-apoio {
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
 .etapas-passos {
@@ -500,11 +505,12 @@ h6 {
 .btn-yellow {
     background-color: #fdd835;
     color: black;
-    padding: 10px 35px;
+    padding: 10px 50px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
 }
 
 .btn-yellow:hover {
@@ -517,8 +523,12 @@ h6 {
     }
 
     .etapas-titulo {
-        font-size: 24px;
+        font-size: 42px;
         margin-bottom: 30px;
+    }
+
+    .etapas-apoio {
+        font-size: 24;
     }
 
     .etapas-passos {
