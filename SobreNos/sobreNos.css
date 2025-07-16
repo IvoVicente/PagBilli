@@ -510,10 +510,16 @@ h6 {
 }
 
 .valores-titulo {
-    font-size: 42px;
+    font-size: 34px;
     font-weight: 700;
     color: #212529;
     margin-bottom: 60px;
+}
+
+.valor-item-po {
+    display: flex;
+    justify-content: center;
+    width: 370px;
 }
 
 /* --- A Grade dos Valores --- */
@@ -524,6 +530,7 @@ h6 {
     /* Espaçamento entre as colunas e linhas */
     column-gap: 50px;
     row-gap: 40px;
+    
 }
 
 /* --- Estilo de cada Item (Número + Texto) --- */
