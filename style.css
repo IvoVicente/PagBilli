@@ -824,14 +824,15 @@ input[type="range"]::-webkit-slider-thumb {
 
 .formulario {
     padding: 50px;
+    background-color: #F7F7F7;
 }
 
 .formulario h2 {
-    font-size: 34px;
+    font-size: 42px;
 }
 
 .formulario p {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 30px;
 }
 
@@ -855,12 +856,14 @@ input[type="range"]::-webkit-slider-thumb {
     border: 0;
     border-bottom: 1px solid;
     padding: 8px 0;
+    background-color: #F7F7F7;;
 }
 
 .formulario form .grid-form div select {
     border: 0;
     border-bottom: 1px solid;
     padding: 8px 0;
+    background-color: #F7F7F7;
 }
 
 .formulario form .grid-form .formulario-termo {
@@ -869,7 +872,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .formulario form .grid-form .formulario-termo label {
     font-size: 14px;
-
 }
 
 .formulario form .grid-form .formulario-termo label a {
@@ -882,6 +884,7 @@ select::placeholder,
 textarea::placeholder {
     font-family: 'Montserrat', sans-serif;
     color: #999;
+    background-color: #F7F7F7;
     font-size: 14px;
     opacity: 1;
     /* importante para alguns browsers */
@@ -926,7 +929,7 @@ textarea::placeholder {
         margin-top: 20px;
         width: 100%;
         padding: 14px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -984,9 +987,9 @@ textarea::placeholder {
 .beneficio-btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 8px 60px;
+    padding: 10px 65px;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     transition: background 0.3s;
     background-color: #fdd835;
