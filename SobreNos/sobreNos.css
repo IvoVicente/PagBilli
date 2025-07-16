@@ -519,6 +519,7 @@ h6 {
 .valor-item-po {
     display: flex;
     justify-content: space-around ;
+    gap: 6px;
     
 }
 
@@ -561,6 +562,8 @@ h6 {
     font-size: 16px;
     line-height: 1.6;
     color: #495057;
+    margin-bottom: 10px;
+    
 }
 
 .valor-texto strong {
