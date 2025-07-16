@@ -505,10 +505,10 @@ h6 {
 .btn-yellow {
     background-color: #fdd835;
     color: black;
-    padding: 10px 50px;
+    padding: 10px 80px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 16px;
 }
@@ -586,7 +586,7 @@ h6 {
 /* sessão 4 */
 
 .economia {
-    background-color: #E7BB0D;
+    background-color: #fff;
     padding: 50px;
 }
 
@@ -597,7 +597,7 @@ h6 {
 }
 
 .economia-titulo {
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 700;
     margin-bottom: 15px;
     max-width: 900px;
@@ -608,6 +608,7 @@ h6 {
 
 .economia-titulo-po {
     align-items: center;
+    width: 40%;
 }
 
 .economia-titulo-po-po {
@@ -684,7 +685,7 @@ input[type="range"]::-webkit-slider-thumb {
 .beneficios-container {
     display: grid;
     /* Cria uma grade com 4 colunas de tamanho igual */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     /* Espaçamento entre os cards */
     max-width: 1200px;
@@ -697,26 +698,14 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 /* --- Estilo do Ícone e Título --- */
-.card-icon {
-    /* Estilize seu ícone aqui. Ex: */
-    font-size: 32px;
-    /* Placeholder para o tamanho do ícone */
-    color: #FFC107;
-    /* Cor amarela para o ícone escuro */
-    width: 40px;
-    /* Largura fixa para o container do ícone */
-    height: 40px;
-    /* Altura fixa */
+.card-icon img {
+    width: 39px;
 }
 
 
 
 /* --- Variações de Cor dos Cards --- */
 .card-light {
-    background-color: #f8f9fa;
-    /* Um branco levemente acinzentado */
-
-    /* Cor do texto escuro */
     padding: 15px;
     border-radius: 24px;
     /* Bordas bem arredondadas */
@@ -724,11 +713,8 @@ input[type="range"]::-webkit-slider-thumb {
     flex-direction: column;
     gap: 15px;
     /* Espaço entre o ícone e o título */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 0.75rem;
-    font-weight: 600;
+
+    
     line-height: 1.1;
     margin: 0;
     color: black;
@@ -736,42 +722,15 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .card-light h3 {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-light p {
+    font-size: 13px;
 }
 
 .card-light:hover {
-    transform: translateY(-5px);
-    /* Efeito de levantar ao passar o mouse */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.card-dark {
-    background-color: #343a40;
-    /* Cor de fundo escura */
-    color: white;
-    /* Cor do texto claro */
-    padding: 15px;
-    border-radius: 24px;
-    /* Bordas bem arredondadas */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* Espaço entre o ícone e o título */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.1;
-    margin: 0;
-
-}
-
-.card-dark h3 {
-    font-size: 14px;
-}
-
-.card-dark:hover {
     transform: translateY(-5px);
     /* Efeito de levantar ao passar o mouse */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
