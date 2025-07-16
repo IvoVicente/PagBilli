@@ -745,6 +745,47 @@ h6 {
 }
 
 
+
+/*produto*/
+
+.produto-po {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.produto-po p {
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.produto-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px 20px;
+}
+
+.produto-esp {
+    width: 285px;
+}
+
+@media (max-width: 768px) {
+    .produto-po {
+        flex-direction: column;
+    }
+
+    .produto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /*atuacao*/
 
 /* --- Estilos Gerais da Seção --- */
