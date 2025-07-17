@@ -1211,7 +1211,7 @@ textarea::placeholder {
     }
 
     .vemser-btn-outline {
-        padding: 14px 45px;
+        padding: 13px 10px;
     }
 
     .vemser-btn .arrow {
@@ -1292,12 +1292,12 @@ textarea::placeholder {
 
     .duvida-po {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     .duvida-po>div:first-child h2 {
         font-size: 24px;
-        text-align: center;
+        text-align: left;
         margin-bottom: 30px;
     }
 
