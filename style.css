@@ -1089,7 +1089,7 @@ textarea::placeholder {
 }
 
 .vemser-btn {
-    padding: 10px 80px;
+    padding: 10px 65px;
     border-radius: 25px;
     font-size: 16px;
     text-decoration: none;
@@ -1113,8 +1113,15 @@ textarea::placeholder {
     background-color: transparent;
     color: #fdd835;
     border: 1px solid #fdd835;
-    padding: 10px 50px;
+    padding: 10px 40px;
     font-weight: 600;
+}
+
+.ma-arrow {
+    margin-left: 42px;
+    transition: margin 0.3s ease;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .vemser-btn-outline:hover {
@@ -1152,6 +1159,11 @@ textarea::placeholder {
     font-weight: bold;
     font-size: 20px;
 
+}
+
+.vemser-btn:hover .ma-arrow {
+    margin-left: 50px;
+    /* move um pouco a seta ao passar o mouse */
 }
 
 .vemser-btn:hover .arrow {
@@ -1212,6 +1224,12 @@ textarea::placeholder {
 
     .vemser-btn-outline {
         padding: 13px 10px;
+    }
+
+
+    .vemser-btn .ma-arrow {
+        font-size: 18px;
+        margin-left: 34px;
     }
 
     .vemser-btn .arrow {
